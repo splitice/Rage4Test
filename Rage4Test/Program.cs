@@ -18,6 +18,7 @@ namespace Rage4Test
             int testCount = 10000;
 
             Resolver r = new Resolver(Dns.GetHostAddresses(nameserver)[0], 53);
+            r.UseCache = false;
             for (int i = 0; i < testCount; i++)
             {
                 Console.WriteLine("Performing request {0}", i);
